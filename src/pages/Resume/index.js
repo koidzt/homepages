@@ -1,0 +1,49 @@
+import BackToTop from '../../components/Scrolling/BackToTop';
+import { Avatar, Box, Grid, Paper, Typography } from '@mui/material';
+import { ColData, RowData } from '../../components/DataBox';
+import { resume } from '../../store/resume';
+import Picture from '../../asset/image/picture.jpg';
+
+function index() {
+  return (
+    <BackToTop>
+      <Paper sx={{ p: 1, m: 1 }}>
+        <Box textAlign={'center'} py={1} mb={3}>
+          <Typography variant="h3" color={'primary.light'}>
+            {resume.title.toLocaleUpperCase()}
+          </Typography>
+        </Box>
+
+        <Grid container spacing={3}>
+          <Grid item sm={12} md={4}>
+            <Box display={'flex'} justifyContent={'center'}>
+              <Avatar
+                alt="picture"
+                src={Picture}
+                sx={{
+                  width: 250,
+                  height: 250,
+                  mb: 5,
+                  borderWidth: 5,
+                  borderStyle: 'ridge',
+                  borderColor: 'primary.light',
+                }}
+              />
+            </Box>
+
+            <RowData {...resume.info} sxLists={{ mb: 5 }} />
+            <RowData {...resume.skill} sxLists={{ mb: 5 }} />
+            <RowData {...resume.contact} sxLists={{ mb: 5 }} />
+          </Grid>
+
+          <Grid item sm={12} md={8}>
+            <ColData {...resume.work} sx={{ mb: 4 }} spacing={2} />
+            <ColData {...resume.education} sx={{ mb: 4 }} spacing={2} />
+          </Grid>
+        </Grid>
+      </Paper>
+    </BackToTop>
+  );
+}
+
+export default index;
