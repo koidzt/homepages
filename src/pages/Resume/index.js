@@ -1,4 +1,4 @@
-import BackToTop from '../../components/Scrolling/BackToTop';
+import AppBarWithBackToTop from '../../components/AppBar/AppBarWithBackToTop';
 import { Avatar, Box, Grid, Paper, Typography } from '@mui/material';
 import { ColData, RowData } from '../../components/DataBox';
 import { resume } from '../../store/resume';
@@ -6,7 +6,7 @@ import Picture from '../../asset/image/picture.jpg';
 
 function index() {
   return (
-    <BackToTop>
+    <AppBarWithBackToTop sxAppBar={{ display: 'flex', mb: [2, 3] }}>
       <Paper sx={{ p: 1, m: 1 }}>
         <Box textAlign={'center'} mb={[1, 3]}>
           <Typography variant="h3" color={'primary.light'}>
@@ -42,7 +42,7 @@ function index() {
           </Grid>
         </Grid>
       </Paper>
-    </BackToTop>
+    </AppBarWithBackToTop>
   );
 }
 

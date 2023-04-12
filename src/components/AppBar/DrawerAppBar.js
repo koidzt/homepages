@@ -18,7 +18,7 @@ import HideOnScroll from '../Scrolling/HideOnScroll';
 
 const drawerWidth = 240;
 
-function DrawerAppBar(props) {
+function DrawerAppBar({ sx, ...props }) {
   const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -45,7 +45,7 @@ function DrawerAppBar(props) {
   );
 
   return (
-    <Box sx={{ display: 'flex', mb: [2, 3] }}>
+    <Box sx={sx}>
       <CssBaseline />
       <HideOnScroll>
         <AppBar component="nav">

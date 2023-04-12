@@ -1,43 +1,44 @@
 import { Fragment } from 'react';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
-import Container from '@mui/material/Container';
 import Fade from '@mui/material/Fade';
 import Fab from '@mui/material/Fab';
-import Toolbar from '@mui/material/Toolbar';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import DrawerAppBar from '../AppBar/DrawerAppBar';
 
-function BackToTop(props) {
-  const { children } = props;
-
+function BackToAnchor({
+  children,
+  id = 'back-to-anchor',
+  ReactNoteIcon,
+  sxButtonToAnchor = { position: 'fixed', bottom: 16, left: 16 },
+  sizeButton = 'small',
+}) {
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 100,
   });
 
   const handleClick = (event) => {
-    const anchor = (event.target.ownerDocument || document).querySelector('#back-to-top-anchor');
+    const anchor = (event.target.ownerDocument || document).querySelector(`#${id}`);
 
     if (anchor) {
       anchor.scrollIntoView({
-        block: 'center',
+        block: 'start', // start | center |end
       });
     }
   };
+
   return (
     <Fragment>
       <CssBaseline />
-      <Toolbar id="back-to-top-anchor" />
-      <DrawerAppBar />
+      <Box id={id} />
 
-      <Container>{children}</Container>
+      <Box>{children}</Box>
 
       <Fade in={trigger}>
-        <Box onClick={handleClick} role="presentation" sx={{ position: 'fixed', bottom: 16, right: 16 }}>
-          <Fab size="small" aria-label="scroll back to top">
-            <KeyboardArrowUpIcon />
+        <Box onClick={handleClick} role="presentation" sx={sxButtonToAnchor}>
+          <Fab size={sizeButton} aria-label="scroll back to top">
+            {ReactNoteIcon ? ReactNoteIcon : <KeyboardArrowUpIcon />}
           </Fab>
         </Box>
       </Fade>
@@ -45,4 +46,4 @@ function BackToTop(props) {
   );
 }
 
-export default BackToTop;
+export default BackToAnchor;
