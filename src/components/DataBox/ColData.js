@@ -1,9 +1,9 @@
 import { Box, List, ListItem, ListItemText, Stack, Typography } from '@mui/material';
 
-const initialColData = {
-  title: '',
-  contents: [{ header: '', subtitle: '', period: '', lists: [{ subtitle: '', text: '' }] }],
-};
+// const initialColData = {
+//   title: '',
+//   contents: [{ header: '', subtitle: '', period: '', lists: [{ subtitle: '', text: '' }] }],
+// };
 
 const initContents = [{ header: '', subtitle: '', period: '', lists: [{ subtitle: '', text: '' }] }];
 
@@ -26,7 +26,7 @@ function ColData({ title = '', contents = initContents, sx, spacing, sxContents,
               display={'inline-block'}
               fontWeight={'bold'}
               fontStyle={'oblique'}
-              color={'grey'}
+              color={'secondary.light'}
             >
               {content.subtitle}
             </Typography>
@@ -35,7 +35,7 @@ function ColData({ title = '', contents = initContents, sx, spacing, sxContents,
                 variant="body1"
                 display={'inline-block'}
                 fontStyle={'oblique'}
-                color={'grey.dark'}
+                color={'secondary.dark'}
                 borderLeft={'1px solid'}
                 borderColor={'primary.dark'}
                 ml={1}
