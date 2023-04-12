@@ -15,7 +15,7 @@ function index() {
         </Box>
 
         <Grid container spacing={[2, 3]}>
-          <Grid item sm={12} md={4}>
+          <Grid item xs={12} md={4}>
             <Box display={'flex'} justifyContent={'center'}>
               <Avatar
                 alt="picture"
@@ -36,7 +36,7 @@ function index() {
             <RowData {...resume.contact} sxLists={{ mb: 5 }} />
           </Grid>
 
-          <Grid item sm={12} md={8}>
+          <Grid item xs={12} md={8}>
             <ColData {...resume.work} sx={{ mb: 4 }} spacing={2} />
             <ColData {...resume.education} sx={{ mb: 4 }} spacing={2} />
           </Grid>
