@@ -8,22 +8,22 @@ function index() {
   return (
     <BackToTop>
       <Paper sx={{ p: 1, m: 1 }}>
-        <Box textAlign={'center'} py={1} mb={3}>
+        <Box textAlign={'center'} mb={[1, 3]}>
           <Typography variant="h3" color={'primary.light'}>
             {resume.title.toLocaleUpperCase()}
           </Typography>
         </Box>
 
-        <Grid container spacing={3}>
+        <Grid container spacing={[2, 3]}>
           <Grid item sm={12} md={4}>
             <Box display={'flex'} justifyContent={'center'}>
               <Avatar
                 alt="picture"
                 src={Picture}
                 sx={{
-                  width: 250,
-                  height: 250,
-                  mb: 5,
+                  width: [175, 200],
+                  height: [175, 200],
+                  mb: [2, 5],
                   borderWidth: 5,
                   borderStyle: 'ridge',
                   borderColor: 'primary.light',

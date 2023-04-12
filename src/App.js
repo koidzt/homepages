@@ -1,9 +1,10 @@
 import { Suspense, createContext, useMemo, useState } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
 import { navMenu } from './config/menu.config';
 import Fallback from './components/Fallback';
+import { blueGrey } from '@mui/material/colors';
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
@@ -18,15 +19,20 @@ function App() {
     []
   );
 
-  const theme = useMemo(
+  let theme = useMemo(
     () =>
       createTheme({
         palette: {
           mode,
+          secondary: {
+            main: blueGrey[400],
+          },
         },
       }),
     [mode]
   );
+
+  theme = responsiveFontSizes(theme);
 
   return (
     <ColorModeContext.Provider value={colorMode}>

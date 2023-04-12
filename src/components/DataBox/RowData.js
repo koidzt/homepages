@@ -1,6 +1,6 @@
 import { Box, List, ListItem, ListItemText, Typography } from '@mui/material';
 
-const initialRowData = { title: '', lists: [{ subtitle: '', text: '' }] };
+// const initialRowData = { title: '', lists: [{ subtitle: '', text: '' }] };
 
 function RowData({ title = '', lists = [{ subtitle: '', text: '' }], sx, sxLists, ...props }) {
   return (
