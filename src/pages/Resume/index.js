@@ -2,14 +2,14 @@ import AppBarWithBackToTop from '../../components/AppBar/AppBarWithBackToTop';
 import { Avatar, Box, Grid, Paper, Typography } from '@mui/material';
 import { ColData, RowData } from '../../components/DataBox';
 import { resume } from '../../store/resume';
-import Picture from '../../asset/image/picture.jpg';
+import Picture from '../../asset/image/resume.jpg';
 
-function index() {
+function Resume() {
   return (
     <AppBarWithBackToTop sxAppBar={{ display: 'flex', mb: [2, 3] }}>
       <Paper sx={{ p: 1, m: 1 }}>
         <Box textAlign={'center'} mb={[1, 3]}>
-          <Typography variant="h3" color={'primary.light'}>
+          <Typography variant="h3" color={`info.light`}>
             {resume.title.toLocaleUpperCase()}
           </Typography>
         </Box>
@@ -26,7 +26,7 @@ function index() {
                   mb: [2, 5],
                   borderWidth: 5,
                   borderStyle: 'ridge',
-                  borderColor: 'primary.light',
+                  borderColor: 'info.light',
                 }}
               />
             </Box>
@@ -46,4 +46,4 @@ function index() {
   );
 }
 
-export default index;
+export default Resume;
