@@ -7,7 +7,6 @@ import {
   deepOrange,
   deepPurple,
   green,
-  grey,
   indigo,
   lightBlue,
   lightGreen,
