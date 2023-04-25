@@ -1,7 +1,7 @@
 import BackToTop from '../../components/Scrolling/BackToTop';
 import { Paper } from '@mui/material';
 
-function index() {
+function Contact() {
   return (
     <BackToTop>
       <Paper sx={{ p: 1 }}>Contact</Paper>
@@ -9,4 +9,4 @@ function index() {
   );
 }
 
-export default index;
+export default Contact;
