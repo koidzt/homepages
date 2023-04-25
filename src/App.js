@@ -3,8 +3,8 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
 import { navMenu } from './config/menu.config';
+import { additionTheme } from './config/theme.config';
 import Fallback from './components/Fallback';
-import { blueGrey } from '@mui/material/colors';
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
@@ -24,9 +24,7 @@ function App() {
       createTheme({
         palette: {
           mode,
-          secondary: {
-            main: blueGrey[400],
-          },
+          ...(mode === 'light' ? additionTheme.light : additionTheme.dark),
         },
       }),
     [mode]
