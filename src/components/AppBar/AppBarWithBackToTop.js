@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
@@ -23,7 +22,6 @@ function AppBarWithBackToTop({
   sxAppBar,
   showHiddenMenu = false,
 }) {
-  const navigate = useNavigate();
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 100,
@@ -39,9 +37,6 @@ function AppBarWithBackToTop({
     }
   };
 
-  const handleClickMenu = (path = '/') => {
-    return () => navigate(path);
-  };
   return (
     <Stack minHeight={'100vh'} display={'flex'} justifyContent={'space-between'}>
       <Box>
@@ -73,7 +68,7 @@ function AppBarWithBackToTop({
       {showHiddenMenu && (
         <Stack direction={'row'} spacing={1}>
           {hiddenMenu.map((item, idx) => (
-            <Button variant="text" onClick={handleClickMenu(item.path)}>
+            <Button variant="text" href={item.path}>
               {item.name}
             </Button>
           ))}

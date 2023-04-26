@@ -35,6 +35,13 @@ export const additionTheme = {
       dark: pink[700],
       contrastText: '#fff',
     },
+    pinkSweet: {
+      // #F699CD
+      light: '#F8C1E1', // [100]
+      main: '#F699CE', // [300]
+      dark: '#F650A6', // [600]
+      contrastText: '#fff',
+    },
     purple: {
       light: purple[300],
       main: purple[500],
@@ -150,6 +157,13 @@ export const additionTheme = {
       light: pink[50],
       main: pink[100],
       dark: pink[300],
+      contrastText: 'rgba(0,0,0,0.87)',
+    },
+    pinkSweet: {
+      // #F699CD
+      light: '#FCE6F3', // [50]
+      main: '#F8C1E1', // [100]
+      dark: '#F670B9', // [300]
       contrastText: 'rgba(0,0,0,0.87)',
     },
     purple: {
