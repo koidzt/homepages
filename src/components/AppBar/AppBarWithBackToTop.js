@@ -8,7 +8,6 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import DrawerAppBar from '../AppBar/DrawerAppBar';
 import { Button, Stack } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
 import { hiddenMenu } from '../../config/menu.config';
 
 function AppBarWithBackToTop({

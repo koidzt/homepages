@@ -1,7 +1,6 @@
 import AppBarWithBackToTop from '../../components/AppBar/AppBarWithBackToTop';
-import { Box, Button, Grid, Paper, Stack, Typography } from '@mui/material';
+import { Box, Grid, Paper, Stack, Typography } from '@mui/material';
 import MeImg from '../../asset/image/home.jpg';
-import { hiddenMenu } from '../../config/menu.config';
 
 function Home() {
   return (
