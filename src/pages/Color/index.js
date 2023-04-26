@@ -70,7 +70,7 @@ const ButtonColorTheme = (color) => (
 
 function Color() {
   return (
-    <AppBarWithBackToTop sxAppBar={{ mb: [2, 3] }}>
+    <AppBarWithBackToTop showHiddenMenu sxAppBar={{ mb: [2, 3] }}>
       <Typography variant="h2" textAlign={'center'}>
         Color Theme
       </Typography>

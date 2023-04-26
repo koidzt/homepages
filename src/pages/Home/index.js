@@ -1,10 +1,11 @@
 import AppBarWithBackToTop from '../../components/AppBar/AppBarWithBackToTop';
-import { Box, Grid, Paper, Stack, Typography } from '@mui/material';
+import { Box, Button, Grid, Paper, Stack, Typography } from '@mui/material';
 import MeImg from '../../asset/image/home.jpg';
+import { hiddenMenu } from '../../config/menu.config';
 
 function Home() {
   return (
-    <AppBarWithBackToTop sxAppBar={{ mb: [2, 0.75] }}>
+    <AppBarWithBackToTop showHiddenMenu sxAppBar={{ mb: [2, 0.75] }}>
       <Paper>
         <Grid container>
           <Grid item xs={12} md={6}>

@@ -2,7 +2,7 @@ import { Suspense, createContext, useMemo, useState } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
-import { navMenu } from './config/menu.config';
+import { navMenu, totalMenu } from './config/menu.config';
 import { additionTheme } from './config/theme.config';
 import Fallback from './components/Fallback';
 
@@ -39,7 +39,7 @@ function App() {
         <BrowserRouter>
           <Suspense fallback={<Fallback />}>
             <Routes>
-              {navMenu.map(({ name, path, component: PageComponent }) => (
+              {totalMenu.map(({ name, path, component: PageComponent }) => (
                 <Route key={`nav-${name}`} path={path} element={<PageComponent />} />
               ))}
               <Route path="*" element={<Navigate to={navMenu[0].path} replace />} />
