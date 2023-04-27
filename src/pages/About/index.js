@@ -7,7 +7,7 @@ import MyselfImg from '../../asset/image/about.jpg';
 function About() {
   return (
     <AppBarWithBackToTop>
-      <Paper sx={{ p: 3 }}>
+      <Paper sx={{ p: 3, mb: [2, 3] }}>
         <Grid container justifyContent={'center'} mb={5} sx={{ display: { md: 'none' } }}>
           <Grid item xs={12} md={3}>
             <Box
@@ -68,12 +68,17 @@ function About() {
         <Grid container alignItems={'flex-end'}>
           <Grid item xs={12} md={4} mb={[10, 0]}>
             <Box>
-              <Typography variant="h5" color={'primary.dark'}>
+              <Typography variant="h5" color={'primary.dark'} textAlign={{ xs: 'center', md: 'start' }}>
                 {about.link.title.toLocaleUpperCase()}
               </Typography>
 
               {about.link.lists.map((list, idx) => (
-                <Stack key={`skill-${list.subtitle}`} direction={'row'} alignItems={'center'}>
+                <Stack
+                  key={`skill-${list.subtitle}`}
+                  direction={'row'}
+                  alignItems={'center'}
+                  justifyContent={{ xs: 'center', md: 'start' }}
+                >
                   <Typography variant="subtitle1" mr={1} color={'primary'}>
                     {list.subtitle} :
                   </Typography>
