@@ -70,7 +70,7 @@ const ButtonColorTheme = (color) => (
 
 function Color() {
   return (
-    <AppBarWithBackToTop showHiddenMenu sxAppBar={{ mb: [2, 3] }}>
+    <AppBarWithBackToTop showHiddenMenu>
       <Typography variant="h2" textAlign={'center'}>
         Color Theme
       </Typography>
@@ -96,7 +96,7 @@ function Color() {
 
           {/* Col2 */}
           <Grid item xs={12} md={3} textAlign={'center'}>
-            {TextColorTheme('pinkSweet')}
+            {TextColorTheme('lightPink')}
             {TextColorTheme('red')}
             {TextColorTheme('pink')}
             {TextColorTheme('purple')}
@@ -149,7 +149,7 @@ function Color() {
 
           {/* Col2 */}
           <Grid item xs={12} md={3}>
-            {BgColorTheme('pinkSweet')}
+            {BgColorTheme('lightPink')}
             {BgColorTheme('red')}
             {BgColorTheme('pink')}
             {BgColorTheme('purple')}
@@ -205,7 +205,7 @@ function Color() {
           {/* Col2 */}
           <Grid item xs={12} md={3}>
             <Stack spacing={1}>
-              {ButtonColorTheme('pinkSweet')}
+              {ButtonColorTheme('lightPink')}
               {ButtonColorTheme('red')}
               {ButtonColorTheme('pink')}
               {ButtonColorTheme('purple')}

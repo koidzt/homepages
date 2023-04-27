@@ -35,7 +35,7 @@ export const additionTheme = {
       dark: pink[700],
       contrastText: '#fff',
     },
-    pinkSweet: {
+    lightPink: {
       // #F699CD
       light: '#F8C1E1', // [100]
       main: '#F699CE', // [300]
@@ -159,7 +159,7 @@ export const additionTheme = {
       dark: pink[300],
       contrastText: 'rgba(0,0,0,0.87)',
     },
-    pinkSweet: {
+    lightPink: {
       // #F699CD
       light: '#FCE6F3', // [50]
       main: '#F8C1E1', // [100]

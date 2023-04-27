@@ -67,7 +67,7 @@ function AppBarWithBackToTop({
       {showHiddenMenu && (
         <Stack direction={'row'} spacing={1}>
           {hiddenMenu.map((item, idx) => (
-            <Button variant="text" href={item.path}>
+            <Button key={item.name} variant="text" href={item.path} color="grey">
               {item.name}
             </Button>
           ))}

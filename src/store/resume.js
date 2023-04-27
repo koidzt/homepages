@@ -18,20 +18,23 @@ export const resume = {
   skill: {
     title: 'TECHNICAL SKILLS',
     lists: [
-      { subtitle: 'Languages', text: 'HTML, CSS, Javascript, TypeScript' },
-      { subtitle: 'Frameworks', text: 'React.js, Node.js' },
-      { subtitle: 'Library', text: 'Express, Sequelize, MogoDB, Axios, Antd, Bootstrap, Material UI' },
-      { subtitle: 'Other', text: 'Git' },
+      { subtitle: 'Languages', text: 'HTML, CSS, Javascript, TypeScript, Node.js' },
+      { subtitle: 'Frameworks', text: 'React.js, Express.js' },
+      { subtitle: 'Library & Tools', text: 'Git, Sequelize, MogoDB, Axios, Antd, Bootstrap, Material UI' },
     ],
+  },
+
+  link: {
+    title: 'LINK',
+    lists: [{ subtitle: 'Github', text: 'https://github.com/koidzt', link: 'https://github.com/koidzt' }],
   },
 
   contact: {
     title: 'CONTACT DETAILS',
     lists: [
       { subtitle: 'Mobile Phone', text: '(088) 617 6222' },
-      { subtitle: 'Email Address', text: 'thanawan.koi@hotmail.com' },
+      { subtitle: 'Email Address', text: 'thanawan.koi@hotmail.com', link: 'mailto:thanawan.koi@hotmail.com' },
       { subtitle: 'Home Address', text: '579 Sukhumvit22 Road, Klongton, Klongtoey, Bangkok 10110' },
-      { subtitle: 'Github', text: 'https://github.com/koidzt' },
     ],
   },
 

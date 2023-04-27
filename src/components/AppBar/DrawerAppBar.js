@@ -45,7 +45,7 @@ function DrawerAppBar({ sx, ...props }) {
   );
 
   return (
-    <Box sx={sx}>
+    <Box sx={{ mb: [2, 3], ...sx }}>
       <CssBaseline />
       <HideOnScroll>
         <AppBar component="nav">
