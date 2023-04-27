@@ -1,21 +1,21 @@
-import BackToTop from '../../components/Scrolling/BackToTop';
+import AppBarWithBackToTop from '../../components/AppBar/AppBarWithBackToTop';
 import { Avatar, Box, Grid, Paper, Typography } from '@mui/material';
 import { ColData, RowData } from '../../components/DataBox';
 import { resume } from '../../store/resume';
-import Picture from '../../asset/image/picture.jpg';
+import Picture from '../../asset/image/resume.jpg';
 
-function index() {
+function Resume() {
   return (
-    <BackToTop>
+    <AppBarWithBackToTop>
       <Paper sx={{ p: 1, m: 1 }}>
         <Box textAlign={'center'} mb={[1, 3]}>
-          <Typography variant="h3" color={'primary.light'}>
+          <Typography variant="h3" color={`info.light`}>
             {resume.title.toLocaleUpperCase()}
           </Typography>
         </Box>
 
         <Grid container spacing={[2, 3]}>
-          <Grid item sm={12} md={4}>
+          <Grid item xs={12} md={4}>
             <Box display={'flex'} justifyContent={'center'}>
               <Avatar
                 alt="picture"
@@ -23,27 +23,28 @@ function index() {
                 sx={{
                   width: [175, 200],
                   height: [175, 200],
-                  mb: [2, 5],
+                  mb: [2, 4],
                   borderWidth: 5,
                   borderStyle: 'ridge',
-                  borderColor: 'primary.light',
+                  borderColor: 'info.light',
                 }}
               />
             </Box>
 
-            <RowData {...resume.info} sxLists={{ mb: 5 }} />
-            <RowData {...resume.skill} sxLists={{ mb: 5 }} />
-            <RowData {...resume.contact} sxLists={{ mb: 5 }} />
+            <RowData {...resume.info} sxList={{ mb: 4 }} />
+            <RowData {...resume.skill} sxList={{ mb: 4 }} />
+            <RowData {...resume.link} sxList={{ mb: 4 }} />
+            <RowData {...resume.contact} sxList={{ mb: 4 }} />
           </Grid>
 
-          <Grid item sm={12} md={8}>
+          <Grid item xs={12} md={8}>
             <ColData {...resume.work} sx={{ mb: 4 }} spacing={2} />
             <ColData {...resume.education} sx={{ mb: 4 }} spacing={2} />
           </Grid>
         </Grid>
       </Paper>
-    </BackToTop>
+    </AppBarWithBackToTop>
   );
 }
 
-export default index;
+export default Resume;

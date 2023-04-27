@@ -1,4 +1,4 @@
-import { Box, List, ListItem, ListItemText, Stack, Typography } from '@mui/material';
+import { Box, List, ListItem, ListItemText, Stack, Typography, useTheme } from '@mui/material';
 
 // const initialColData = {
 //   title: '',
@@ -8,6 +8,7 @@ import { Box, List, ListItem, ListItemText, Stack, Typography } from '@mui/mater
 const initContents = [{ header: '', subtitle: '', period: '', lists: [{ subtitle: '', text: '' }] }];
 
 function ColData({ title = '', contents = initContents, sx, spacing, sxContents, sxLists, ...props }) {
+  const theme = useTheme();
   return (
     <Box sx={sx} {...props}>
       <Typography variant="h5" color={'primary.dark'} gutterBottom>
@@ -17,7 +18,7 @@ function ColData({ title = '', contents = initContents, sx, spacing, sxContents,
       <Stack spacing={spacing} ml={1} sx={sxContents}>
         {contents.map((content, index) => (
           <Box key={`${title}-content-${index}`}>
-            <Typography variant="h6" color={'primary'}>
+            <Typography variant="h6" color={'primary.main'}>
               {content.header}
             </Typography>
 
@@ -26,7 +27,7 @@ function ColData({ title = '', contents = initContents, sx, spacing, sxContents,
               display={'inline-block'}
               fontWeight={'bold'}
               fontStyle={'oblique'}
-              color={'secondary.light'}
+              color={`blueGrey.main`}
             >
               {content.subtitle}
             </Typography>
@@ -35,7 +36,7 @@ function ColData({ title = '', contents = initContents, sx, spacing, sxContents,
                 variant="body1"
                 display={'inline-block'}
                 fontStyle={'oblique'}
-                color={'secondary.dark'}
+                color={`blueGrey.${theme.palette.mode}`}
                 borderLeft={'1px solid'}
                 borderColor={'primary.dark'}
                 ml={1}
