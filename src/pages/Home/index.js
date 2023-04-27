@@ -1,10 +1,18 @@
 import AppBarWithBackToTop from '../../components/AppBar/AppBarWithBackToTop';
-import { Box, Button, Grid, IconButton, Paper, Typography } from '@mui/material';
+import { useNavigate } from 'react-router';
+import { Box, Button, Grid, Paper, Typography } from '@mui/material';
 import MyselfImg from '../../asset/image/home.jpg';
 import MyTimeline from './MyTimeline';
 import ContactPageOutlinedIcon from '@mui/icons-material/ContactPageOutlined';
 import PortraitOutlinedIcon from '@mui/icons-material/PortraitOutlined';
+
 function Home() {
+  const navigate = useNavigate();
+
+  const handleClickButton = (path = '/') => {
+    return () => navigate(path);
+  };
+
   return (
     <AppBarWithBackToTop>
       <Paper>
@@ -25,10 +33,10 @@ function Home() {
           </Grid>
 
           <Grid item xs={12} textAlign={'end'}>
-            <Button variant="text" startIcon={<PortraitOutlinedIcon />} href="/about">
+            <Button variant="text" startIcon={<PortraitOutlinedIcon />} onClick={handleClickButton('/about')}>
               About
             </Button>
-            <Button variant="text" startIcon={<ContactPageOutlinedIcon />} href="/resume">
+            <Button variant="text" startIcon={<ContactPageOutlinedIcon />} onClick={handleClickButton('/resume')}>
               Resume
             </Button>
           </Grid>
