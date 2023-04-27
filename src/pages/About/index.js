@@ -1,5 +1,5 @@
 import AppBarWithBackToTop from '../../components/AppBar/AppBarWithBackToTop';
-import { Avatar, Box, Grid, Link, Paper, Stack, Typography } from '@mui/material';
+import { Box, Grid, Link, Paper, Stack, Typography } from '@mui/material';
 import { RowData } from '../../components/DataBox';
 import { about } from '../../store/about';
 import MyselfImg from '../../asset/image/about.jpg';
