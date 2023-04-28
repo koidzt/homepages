@@ -18,15 +18,18 @@ export const resume = {
   skill: {
     title: 'TECHNICAL SKILLS',
     lists: [
-      { subtitle: 'Languages', text: 'HTML, CSS, Javascript, TypeScript, Node.js' },
-      { subtitle: 'Frameworks', text: 'React.js, Express.js' },
+      { subtitle: 'Languages', text: 'HTML, CSS, Javascript, TypeScript' },
+      { subtitle: 'Frameworks', text: 'React.js, Node.js, Express.js' },
       { subtitle: 'Library & Tools', text: 'Git, Sequelize, MogoDB, Axios, Antd, Bootstrap, Material UI' },
     ],
   },
 
   link: {
     title: 'LINK',
-    lists: [{ subtitle: 'Github', text: 'https://github.com/koidzt', link: 'https://github.com/koidzt' }],
+    lists: [
+      { subtitle: 'Github', text: 'https://github.com/koidzt', link: 'https://github.com/koidzt' },
+      { subtitle: 'Homepage', text: 'https://koidzt.netlify.app/', link: 'https://koidzt.netlify.app/' },
+    ],
   },
 
   contact: {

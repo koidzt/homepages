@@ -1,4 +1,5 @@
 import AppBarWithBackToTop from '../../components/AppBar/AppBarWithBackToTop';
+import DelayLoading from '../../components/Loading/DelayLoading';
 import { Avatar, Box, Grid, Paper, Typography } from '@mui/material';
 import { ColData, RowData } from '../../components/DataBox';
 import { resume } from '../../store/resume';
@@ -7,6 +8,7 @@ import Picture from '../../asset/image/resume.jpg';
 function Resume() {
   return (
     <AppBarWithBackToTop>
+      <DelayLoading color={'yellow.main'} timeout={1000} />
       <Paper sx={{ p: 1, m: 1 }}>
         <Box textAlign={'center'} mb={[1, 3]}>
           <Typography variant="h3" color={`info.light`}>
