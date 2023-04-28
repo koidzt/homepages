@@ -5,6 +5,7 @@ import MyselfImg from '../../asset/image/home.jpg';
 import MyTimeline from './MyTimeline';
 import ContactPageOutlinedIcon from '@mui/icons-material/ContactPageOutlined';
 import PortraitOutlinedIcon from '@mui/icons-material/PortraitOutlined';
+import DelayLoading from '../../components/Loading/DelayLoading';
 
 function Home() {
   const navigate = useNavigate();
@@ -15,6 +16,7 @@ function Home() {
 
   return (
     <AppBarWithBackToTop>
+      <DelayLoading color={'lime.main'} />
       <Paper>
         <Grid container>
           <Grid item xs={12}>

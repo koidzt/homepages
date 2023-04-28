@@ -4,7 +4,7 @@ import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/s
 import { CssBaseline } from '@mui/material';
 import { navMenu, totalMenu } from './config/menu.config';
 import { additionTheme } from './config/theme.config';
-import Fallback from './components/Fallback';
+import { Fallback } from './components/Loading';
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
