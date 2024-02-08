@@ -2,6 +2,6 @@
 
 Page is my resume
 
-homepage :
+homepage : https://koidzt.netlify.app/
 
 use node version >= 14
