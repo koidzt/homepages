@@ -18,8 +18,8 @@ export const resume = {
   skill: {
     title: 'TECHNICAL SKILLS',
     lists: [
-      { subtitle: 'Languages', text: 'HTML, CSS, Javascript, TypeScript' },
-      { subtitle: 'Frameworks', text: 'React.js, Node.js, Express.js' },
+      { subtitle: 'Languages', text: 'HTML, CSS, Javascript, TypeScript, JAVA' },
+      { subtitle: 'Frameworks', text: 'React.js, Node.js, Express.js, Next.js, CUBA Platform' },
       { subtitle: 'Library & Tools', text: 'Git, Sequelize, MogoDB, Axios, Antd, Bootstrap, Material UI' },
     ],
   },
@@ -45,9 +45,25 @@ export const resume = {
     title: 'WORK EXPERIENCE',
     contents: [
       {
+        header: 'Software Developer',
+        subtitle: 'AXONS',
+        period: 'July 2023-Present',
+        lists: [
+          {
+            subtitle: 'Trade Term Agreement Project',
+            text: 'Web Applications for managing record data about that trade term agreement sent to request approved and approver can approved agreement.',
+          },
+          // {
+          //   subtitle: 'Manage task by ',
+          //   text: 'Develop Web Applications Frontend by Next.ts\nDevelop Web Applications Backend by JAVA CUBA Platform.',
+          // },
+          { subtitle: 'Support Project', text: 'Develop functions to support another project' },
+        ],
+      },
+      {
         header: 'Front-End Developer',
         subtitle: 'Qbox Point Co., Ltd.',
-        period: 'Mar 2021-Present',
+        period: 'Mar 2021-May 2023',
         lists: [
           {
             subtitle: 'Packing Station Project',

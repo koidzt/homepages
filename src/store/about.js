@@ -5,6 +5,7 @@ import CssSrc from '../asset/icon/Css.png';
 import JsSrc from '../asset/icon/Javascript.png';
 import TsSrc from '../asset/icon/Typescript.png';
 import ReactSrc from '../asset/icon/React.png';
+import NextSrc from '../asset/icon/Next.png';
 import NodeSrc from '../asset/icon/Node.png';
 import GitSrc from '../asset/icon/Git.png';
 import ExpressSrc from '../asset/icon/Expressjs.png';
@@ -25,7 +26,7 @@ export const about = {
       { subtitle: 'Date of Birth', text: `July 27, 1992 (${dayjs().diff('1992-07-27', 'year')})` },
       { subtitle: 'Gander', text: 'Female' },
       { subtitle: 'Nationality', text: 'Thai' },
-      { subtitle: 'Religion', text: 'Buddhism' },
+      // { subtitle: 'Religion', text: 'Buddhism' },
     ],
   },
 
@@ -39,6 +40,7 @@ export const about = {
       { src: TsSrc, label: 'TypeScript' },
 
       { src: ReactSrc, label: 'React' },
+      { src: NextSrc, label: 'Next' },
       { src: NodeSrc, label: 'Node' },
 
       { src: GitSrc, label: 'Git' },
