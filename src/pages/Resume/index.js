@@ -3,7 +3,8 @@ import DelayLoading from '../../components/Loading/DelayLoading';
 import { Avatar, Box, Grid, Paper, Typography } from '@mui/material';
 import { ColData, RowData } from '../../components/DataBox';
 import { resume } from '../../store/resume';
-import Picture from '../../asset/image/resume.jpg';
+// import Picture from '../../asset/image/resume.jpg';
+import Picture from '../../asset/image/IMG_0118.JPG';
 
 function Resume() {
   return (

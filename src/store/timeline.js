@@ -13,7 +13,22 @@ export const myTimeline = [
   {
     icon: BusinessCenterIcon,
     color: 'green',
-    period: 'Mar 2021 - Present',
+    period: 'July 2023 - Present',
+    title: 'AXONS',
+    position: 'Software Developer',
+    description: (
+      <List dense disablePadding>
+        <CustomListItem>Trade Term Agreement Project.</CustomListItem>
+        <CustomListItem> - Frontend by Next typescript.</CustomListItem>
+        <CustomListItem> - Backend by JAVA CUBA Platform.</CustomListItem>
+        <CustomListItem>Support Other Project.</CustomListItem>
+      </List>
+    ),
+  },
+  {
+    icon: BusinessCenterIcon,
+    color: 'cyan',
+    period: 'Mar 2021 - May 2023',
     title: 'Qbox Point Co., Ltd.',
     position: 'Front-End Developer',
     description: (
@@ -27,7 +42,7 @@ export const myTimeline = [
   },
   {
     icon: SchoolIcon,
-    color: 'cyan',
+    color: 'blue',
     period: 'Sep 2020 - Jan 2021',
     title: 'Codecamp by Software Park Thailand',
     position: 'Learned Fullstack Web Developer',
@@ -41,7 +56,7 @@ export const myTimeline = [
   },
   {
     icon: BusinessCenterIcon,
-    color: 'blue',
+    color: 'indigo',
     period: 'Oct 2018 - Aug 2020',
     title: 'Kaspa Pharmaceutical (Thailand) Co., Ltd.',
     position: 'Medical Representative',
